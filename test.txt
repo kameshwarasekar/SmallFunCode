@@ -109,4 +109,11 @@ SPACESHIP_GOLANG_COLOR="cyan"
 '''
 Note: If the git is not displaying, it is mostly because of a lot of arguments for git to be displayed. 
 
+Follow the following instruction for installing zsh and powerlevel9k theme: https://medium.com/@alex285/get-powerlevel9k-the-most-cool-linux-shell-ever-1c38516b0caa
+
+Follow the website for Oh-my-zsh tips and tricks: https://www.sitepoint.com/zsh-tips-tricks/
+
+You can find spaceship(deprecated) config in : https://github.com/pascaldevink/spaceship-zsh-theme
+
+The new spaceship-prompt for zsh can be found at: https://github.com/spaceship-prompt/spaceship-prompt
 
