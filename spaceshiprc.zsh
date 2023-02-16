@@ -1,14 +1,3 @@
-We will look at the steps to setup spaceship in zsh. 
-Clone the repo:
-git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-
-Symlink spaceship.zsh-theme to your oh-my-zsh custom themes directory:
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-
-Set ZSH_THEME="spaceship" in .zshrc
-
-Then use this config:
-'''
 SPACESHIP_PROMPT_ORDER=(
   user
   time
@@ -103,10 +92,3 @@ SPACESHIP_GOLANG_PREFIX="$SPACESHIP_PROMPT_DEFAULT_PREFIX"
 SPACESHIP_GOLANG_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
 SPACESHIP_GOLANG_SYMBOL="🐹 "
 SPACESHIP_GOLANG_COLOR="cyan"
-
-
-
-'''
-Note: If the git is not displaying, it is mostly because of a lot of arguments for git to be displayed. 
-
-
