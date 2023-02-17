@@ -9,7 +9,7 @@ Spock smashes Scissors
 Scissors decapitates Lizard
 Lizard eats Paper
 Paper disproves Spock
-Spock vaporizes Rock
+Spock vaporizes Rock        #testing
 (and as it always has) Rock crushes Scissors
 """
      #testing
