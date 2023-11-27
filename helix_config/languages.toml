@@ -1,0 +1,75 @@
+[[language]]
+name = "python"
+scope = "source.python"
+injection-regex = "python"
+file-types = ["py","pyi","py3","pyw",".pythonstartup",".pythonrc"]
+shebangs = ["python"]
+roots = [".", "pyproject.toml", "pyrightconfig.json"]
+comment-token = "#"
+language-servers = ["pyright"]
+indent = { tab-width = 4, unit = "    " }
+auto-format = true
+
+[language.formatter]
+command = "black"
+args = [
+  "-",
+  "--quiet",
+  "--line-length=88"
+]
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+
+[language-server.pyright.config]
+reportMissingTypeStubs = false
+
+
+[language-server.pyright.config.python.analysis]
+typeCheckingMode = "basic"
+autoImportCompletions = true
+
+# [language-server.ruff]
+# command = "ruff-lsp"
+
+# [language-server.ruff.config]
+# settings = {args = []}
+
+[[language]]
+name = "html"
+formatter = { command = 'prettier', args = ["--parser", "html"] }
+
+[[language]]
+name = "json"
+formatter = { command = 'prettier', args = ["--parser", "json"] }
+
+[[language]]
+name = "css"
+formatter = { command = 'prettier', args = ["--parser", "css"] }
+
+[[language]]
+name = "javascript"
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "typescript"
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "markdown"
+formatter = { command = 'prettier', args = ["--parser", "markdown"] }
+auto-format = true
+
+[[language]]
+name = "hcl"
+formatter = { command = 'terraform', args = ["fmt", "-"] }
+auto-format = true
+
+[[language]]
+name = "tfvars"
+formatter = { command = 'terraform', args = ["fmt", "-"] }
+auto-format = true
