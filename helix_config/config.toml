@@ -2,6 +2,18 @@ theme = "autumn"
 
 [editor]
 mouse = false
+shell = ["zsh", "-cu"]
+line-number = "relative"
+auto-save = true
+completion-replace = true
+
+[editor.statusline]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+center = ["version-control"]
+
+
 
 [editor.cursor-shape]
 insert = "bar"
