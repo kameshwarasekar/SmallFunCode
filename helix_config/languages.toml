@@ -6,7 +6,7 @@ file-types = ["py","pyi","py3","pyw",".pythonstartup",".pythonrc"]
 shebangs = ["python"]
 roots = [".", "pyproject.toml", "pyrightconfig.json"]
 comment-token = "#"
-language-servers = ["pyright"]
+language-servers = ["pyright", "ruff"]
 indent = { tab-width = 4, unit = "    " }
 auto-format = true
 
@@ -25,17 +25,28 @@ args = ["--stdio"]
 
 [language-server.pyright.config]
 reportMissingTypeStubs = false
-
+inlay-hints = true
 
 [language-server.pyright.config.python.analysis]
 typeCheckingMode = "basic"
 autoImportCompletions = true
 
-# [language-server.ruff]
-# command = "ruff-lsp"
+[language-server.ruff]
+command = "ruff-lsp"
 
-# [language-server.ruff.config]
-# settings = {args = []}
+[language-server.ruff.config]
+settings = {args = []}
+
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer"]
+scope = "source.rust"
+injection-regex = "rust"
+file-types = ["rs"]
+comment-token = "//"
+indent = { tab-width = 4, unit = "	"}
+auto-format = true
+
 
 [[language]]
 name = "html"

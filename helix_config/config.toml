@@ -1,4 +1,4 @@
-theme = "autumn"
+theme = "gruvbox_mix_dark_hard"
 
 [editor]
 mouse = false
@@ -6,13 +6,29 @@ shell = ["zsh", "-cu"]
 line-number = "relative"
 auto-save = true
 completion-replace = true
+preview-completion-insert = true
+bufferline = "always"
 
 [editor.statusline]
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
 center = ["version-control"]
+left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
 
+[editor.indent-guides]
+character = "⸽"
+render = true
+
+[editor.whitespace.render]
+
+tab = "all"
+tabpad = "all"
+newline = "none"
+
+[editor.lsp]
+# display-messages = true
+display-inlay-hints = true
 
 
 [editor.cursor-shape]
@@ -22,3 +38,25 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+
+[keys.normal]
+"C-s" = ":w" # saves the current file
+# left = "no_op"
+# right = "no_op"
+down = "no_op"
+up = "no_op"
+y = "yank_main_selection_to_clipboard"
+p = "paste_clipboard_before"
+
+[keys.insert]
+"C-j" = "normal_mode"
+# left = "no_op"
+# right = "no_op"
+down = "no_op"
+up = "no_op"
+"A-h" = "move_char_left"
+"A-l" = "move_char_right"
+"A-k" = "move_line_up"
+"A-j" = "move_line_down"
+j = { k = "normal_mode" }
+

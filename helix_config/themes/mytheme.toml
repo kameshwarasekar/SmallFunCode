@@ -1,0 +1,17 @@
+"namespace" = { fg = "type" }
+"module" = { fg = "type" }
+
+"type" = { fg = "type" }
+"type.builtin" = { fg = "#66D9EF" }
+"type.enum.variant" = { fg = "text" } 
+"constructor" = { fg = "fn_declaration" }
+"variable.other.member" = { fg = "variable" }
+
+
+[palette]
+type = "#A6E22E"
+keyword = "#F92672"
+regex = "#CE9178"
+special = "#C586C0"
+variable = "#F8F8F2"
+fn_declaration = "#A6E22E"
